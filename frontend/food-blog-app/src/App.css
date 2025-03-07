@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: rgb(255, 250, 250);
+  color:black;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: white;
+  background-color: #213547;
+  padding: 10px 20px;
+}
+
+header h2 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header ul {
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  gap: 15px;
+}
+
+header ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+li a:hover, 
+li a.login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+li a.active {
+  
+  color: black;
+  font-weight: bold;
+}
+
+/* General styling for all navbar links */
+li a, li button {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fix the login button so it matches other buttons */
+li .login {
+  background: none;
+  border: none;
+  outline: none;
+ color:black;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for Login button */
+li .login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color:white;
+}
+
+
+section{
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.home{
+  display: flex;
+  margin-top: 6rem;
+  gap:10rem;
+  position: relative;
+}
+.home .left h1{
+  margin-bottom: 1rem;
+}
+
+
+.home button{
+  color: white;
+  border:none;
+  background-color: #213547;
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 8px;
+ 
+}
+
+.home a:hover{
+  color: white;
+  background-color: #000000;
+  
+ 
+}
+
+.home .left h5{
+  margin:2rem 0;
+}
+
+.bg svg{
+  position: absolute;
+  bottom: 0;
+}
+
+.card-container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 3px solid #213547;
+}
+
+.card-body {
+  color: white;
+  background-color: #213547;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-body .title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-body .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card-body .timer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+.action{
+  display: flex;
+  font-size: 19px;
+  justify-content: space-between;
+  align-items: center;
+  width: 45px;
+}
+
+.editIcon{
+  color: black;
+  font-size: 18px;
+}
+
+.action a:hover{
+  color: black;
+}
+
+.deleteIcon{
+  color: rgb(239,53,53);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 2rem;
+  width: 35%;
+  max-width: 400px;
+  background: #213547;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal label {
+  display: block;
+  color: white;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Ensures alignment */
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #fff;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal button {
+  width: 100%;
+  padding: 10px;
+  background: #253768;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal button:hover {
+  background: #ff5733;
+}
+
+.modal a {
+  display: block;
+  color: #ff7b54;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+.modal input {
+  width: 100% !important;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+
+
+.form{
+  width: 71%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-header{
+  background-color: #000000;
+  height: 3px;
+  text-align: center;
+}
+
+.form-control{
+  display: flex;
+  justify-content: space-between;
+  gap:1rem;
+  margin-top: 1rem;
+}
+
+.form-control .input{
+  flex-basis: 70%;
+  border:1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  height: 30px;
+  padding: 2px;
+}
+
+.form-control .input-textarea{
+  border: 1px solid rgb(156 163 175);
+  border-radius: 4px;
+  flex-basis: 70%;
+  padding: 2px;
+}
+
+.form button{
+  margin:2rem 0;
+  border:none;
+  background-color: #000000;
+  font-size: 14px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form p{
+  cursor: pointer;
+  display: inline;
+  border-bottom: 1px solid #307bbd;
+  color:rga(4,136,170);
+  font-size: 14px;
+  color: #307bbd;
+}
+
+.form .error{
+  color:red;
+  font-size: 13px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.add-recipe{
+  width: 100%;
+}
+
+.recipe{
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #213547;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+
+}
+
+
+.outer-container{
+  width: 70%;
+  margin: 5rem auto;
+}
+
+.outer-container .profile{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+}
+
+.outer-container .title{
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.outer-container .recipe-details{
+  display: flex;
+  gap: 3rem;
+  align-items: justify;
+  margin-top: 1rem;
+}
+
+.active{
+  color:black ;
+  background-color: #ffffff;
+}
+
+
